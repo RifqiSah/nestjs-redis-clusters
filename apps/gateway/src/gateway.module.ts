@@ -69,6 +69,9 @@ import { createRedisCluster } from 'apps/utils/redis/redis-cluster.provider';
       }),
       inject: [ConfigService],
     }),
+    BullModule.registerQueue({
+      name: 'data-master-queue',
+    }),
   ],
   controllers: [GatewayController],
   providers: [GatewayService],
